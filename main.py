@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from schemas  import VehicleDutyRequest, VehicleDutyResponse
 from tools import Calculate_Vehical_duty
 
+from sqlmodel import Session,select
+
+
 app=FastAPI(
     title="SmartPort API",
     description="Automated Vehicle Import Duty & Clearance Assistant",
@@ -39,4 +42,5 @@ def compute_duty_endpoint(payload:VehicleDutyRequest):
         cif_value=payload.cif_value_inr,
         **calculate
     )
+
 
