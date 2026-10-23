@@ -56,7 +56,7 @@ class InspectionLab(InspectionLabBase,table=True):
     )
 
 # 4. OUTPUT SCHEMA (API -> Client)
-class InspeactionTread(InspectionLabBase):
+class Inspeactionlabread(InspectionLabBase):
     """
     Outgoing response contract.
     Exposes the system ID and operational status, but omits internal_remarks.

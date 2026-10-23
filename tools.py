@@ -13,7 +13,7 @@ def Calculate_Vehicle_duty(cif_value:float,engine_cc:int,fule:str):
     duty=0
     is_luxuary=False
     if(fule=="electric"):
-        duty=0.07
+        duty=0.70
         if cif_value>=4000000:
             is_luxuary=True
     elif(engine_cc>=3000 or cif_value>=3000000):
@@ -22,6 +22,8 @@ def Calculate_Vehicle_duty(cif_value:float,engine_cc:int,fule:str):
             is_luxuary=True
         else:
             is_luxuary=False
+    else:
+        duty=0.60
 
     bcd=cif_value*duty
     sws=bcd*0.10
